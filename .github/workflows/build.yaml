@@ -28,13 +28,13 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: scmanjarrez/licr:latest
+          tags: scmanjarrez/lirc:latest
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: scmanjarrez/licr
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: scmanjarrez/lirc
 
   mqtt:
     needs: main
@@ -58,4 +58,4 @@ jobs:
           file: ./Dockerfile.mqtt
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: scmanjarrez/licr:mqtt
+          tags: scmanjarrez/lirc:mqtt
