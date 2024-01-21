@@ -1,0 +1,6 @@
+FROM scmanjarrez/lirc:latest
+
+RUN python3 -m pip install --no-cache-dir gmqtt lirc
+COPY watchdog.py /
+
+CMD ["python3", "watchdog.py"]
