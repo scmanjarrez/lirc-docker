@@ -1,9 +1,10 @@
 # LIRC-docker
 This repository arose from my own needs to run LIRC with HomeAssistant, but
 I didn't want to install LIRC. I have prepared two containers:
-- **Only LIRC installed**: can be used the same as if you had LIRC on your system
+- **Only LIRC installed**: can be used the same as if you had LIRC on your system,
+  hosted in dockerhub at `scmanjarrez/lirc`
 - **LIRC + MQTT**: Have a MQTT client alongside LIRC. It subscribes a **topic** and
-  run `irsend` using payload data
+  run `irsend` using payload data, hosted in dockerhub at `scmanjarrez/lirc:mqtt`
 
 ## Preparation steps
 You need to enable the kernel driver for IR in case you're running
